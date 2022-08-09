@@ -19,7 +19,8 @@ import InfoPage from '../InfoPage/InfoPage';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
-
+import AboutForm from '../about/about';
+import About from '../pageHome/page';
 import './App.css';
 
 function App() {
@@ -35,9 +36,10 @@ function App() {
     <Router>
       <div>
         <Nav />
+        
         <Switch>
           {/* Visiting localhost:3000 will redirect to localhost:3000/home */}
-          <Redirect exact from="/" to="/home" />
+          {/* <Redirect exact from="/" to="/home" /> */}
 
           {/* Visiting localhost:3000/about will show the about page. */}
           <Route
@@ -46,6 +48,12 @@ function App() {
             path="/about"
           >
             <AboutPage />
+          </Route>
+          <Route
+          exact
+          path="/aboutnew"
+          >
+          <About />
           </Route>
 
           {/* For protected routes, the view could show one of several things on the same route.
@@ -68,6 +76,15 @@ function App() {
             <InfoPage />
           </ProtectedRoute>
 
+
+          <ProtectedRoute
+            // logged in shows InfoPage else shows LoginPage
+            exact
+            path="/info"
+          >
+
+          
+          </ProtectedRoute>
           <Route
             exact
             path="/login"
@@ -112,8 +129,13 @@ function App() {
 
           {/* If none of the other routes matched, we will show a 404. */}
           <Route>
-            <h1>404</h1>
+          
+           <About />
           </Route>
+          <Route>
+          
+         <AboutForm />
+         </Route>
         </Switch>
         <Footer />
       </div>

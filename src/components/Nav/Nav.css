@@ -5,7 +5,9 @@
   align-items: center;
 
   margin: 0 0 30px;
-  background-color: #00acb0;
+  /* background: url('https://i.imgur.com/OUyfQnt.jpg'); */
+  background-color: #050e25;
+  
   overflow: hidden;
 }
 
@@ -24,8 +26,8 @@
 .navLink {
   display: inline-block;
   color: #f2f2f2;
-  background-color: #00acb0;
-  text-align: center;
+  /* background-color: #0a2832; */
+  /* text-align:; */
   padding: 24px 10px;
   text-decoration: none;
   font-size: 15px;
@@ -37,6 +39,4 @@
   outline: 0;
 }
 
-.navLink:hover {
-  background-color: #008183;
-}
+
