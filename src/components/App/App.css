@@ -101,7 +101,7 @@ Form Treatment
   max-width: 100%;
   padding: 25px;
   margin: 0 auto 20px;
-  background-color: #432d2d;
+  /* background-color: #432d2d; */
   border-radius: 3px;
   box-shadow: 0 1px 2px rgb(0, 0, 0, 0.4);
 }
@@ -110,6 +110,7 @@ input {
   margin: 5px;
   margin-bottom: 10px;
 }
+
 nav {
   max-width: 960px;
   /* mask-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 25%, #ffffff 75%, rgba(255, 255, 255, 0) 100%); */
@@ -119,32 +120,42 @@ nav {
 
 nav ul {
   text-align: center;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.732) 25%, rgba(255, 255, 255, 0.332) 75%, rgba(255, 255, 255, 0.286) 100%);
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+  /* background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.732) 25%, rgba(255, 255, 255, 0.332) 75%, rgba(255, 255, 255, 0.286) 100%); */
+  /* box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6); */
 }
 
 nav ul li {
   display: inline-block;
+  border-radius: 50px;
+  /* moz-transition: all .4s ease-in-out; */
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
 }
 
 nav ul li a {
   padding: 10px;
   font-family: "Open Sans";
-  text-transform:uppercase;
-  color: rgba(209, 5, 35, 0.726);
+  text-transform: uppercase;
+  /* color: rgba(209, 5, 35, 0.726); */
   /* font-size: 18px; */
   text-decoration: none;
   display: block;
+  
+
 }
 
 nav ul li a:hover {
-  box-shadow: 0 0 10px rgba(44, 3, 3, 0.154), inset 0 0 1px rgba(255, 255, 255, 0.6);
-  background: rgba(255, 255, 255, 0.1);
-  color: rgba(196, 18, 18, 0.7);
+  /* box-shadow: 0 0 10px rgba(44, 3, 3, 0.154), inset 0 0 1px rgba(255, 255, 255, 0.6); */
+  /* background: rgba(255, 255, 255, 0.1); */
+  color: rgba(196, 68, 18, 0.583);
+  color: #fff;
+  cursor: pointer;
+  
 }
 
 .wood-text {
-  /* random-text: 'suitable villa'; */
+  /* content:random-text 'suitable villa'; */
   background: url('https://i.imgur.com/OUyfQnt.jpg');
   background-size: cover;
   position: relative;
@@ -154,13 +165,31 @@ nav ul li a:hover {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  
-    content: random-text;
-    position: absolute;
-    -webkit-text-stroke-width: stroke-width;
-    -webkit-text-stroke-color: rgba(black, 0.6);
-    left: 2px;
-    top: 2px
-  }
 
+  content: random-text;
+  position: absolute;
+  -webkit-text-stroke-width: stroke-width;
+  -webkit-text-stroke-color: rgba(black, 0.6);
+  left: 10px;
+  top: 10px
+}
+
+.wood-texte {
+  background-color: rgb(175, 131, 18);
+  background: url('https://i.imgur.com/OUyfQnt.jpg');
+  background-size: cover;
+  text-transform: uppercase;
+  font-family: 'Rancho', cursive;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  content: random-text;
+  /* position: absolute; */
+  -webkit-text-stroke-width: stroke-width;
+  -webkit-text-stroke-color: rgba(black, 0.6);
+}
+
+li {
+  background-color: #061534;
+}
 

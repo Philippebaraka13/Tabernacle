@@ -9,8 +9,8 @@ function Nav() {
 
   return (
     <div className="nav">
-      <Link to="/home">
-        <h2  className="wood-text" >Houston Tabernacle</h2>
+      <Link >
+        <h2 className="wood-text">Houston Tabernacle</h2>
 
       </Link>
       <div>
@@ -37,10 +37,10 @@ function Nav() {
           </>
         )}
          <Link className="navLink" to="/about">
-        <div id="container">
+        <div id="container" >
             <nav>
               <ul>
-                <li><a href="#">Home</a></li>
+                <li><a className="wood-texte" href="#">Home</a></li>
               </ul>
             </nav>
           </div>
@@ -50,7 +50,7 @@ function Nav() {
         <div id="container">
             <nav>
               <ul>
-                <li><a href="#">UpComing Event</a></li>
+                <li><a className="wood-texte" href="#">UpComing Event</a></li>
               </ul>
             </nav>
           </div>
@@ -60,7 +60,7 @@ function Nav() {
         <div id="container">
             <nav>
               <ul>
-                <li><a href="#">Conctact</a></li>
+                <li><a className="wood-texte" href="#">Conctact</a></li>
               </ul>
             </nav>
           </div>
@@ -70,7 +70,7 @@ function Nav() {
         <div id="container">
             <nav>
               <ul>
-                <li><a href="#">Location</a></li>
+                <li><a className="wood-texte" href="#">Location</a></li>
               </ul>
             </nav>
           </div>
@@ -81,7 +81,7 @@ function Nav() {
         <div id="container">
             <nav>
               <ul>
-                <li><a href="#">About</a></li>
+                <li><a className="wood-texte" href="#">About</a></li>
               </ul>
             </nav>
           </div>
@@ -91,7 +91,7 @@ function Nav() {
           <div id="container">
             <nav>
               <ul>
-                <li><a href="#">new</a></li>
+                <li><a className="wood-texte" href="#">new</a></li>
               </ul>
             </nav>
           </div>
