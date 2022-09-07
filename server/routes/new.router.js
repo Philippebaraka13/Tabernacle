@@ -5,7 +5,7 @@ const router = express.Router();
 router.get('/', (req, res) => {
     // GET route code here
 
-    const queryText = `SELECT * FROM "about"
+    const queryText = `SELECT * FROM "new"
     ;`
     pool.query(queryText)
         .then(result => {
@@ -18,14 +18,13 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-    console.log("sdndsd", req.body);
+    console.log("new", req.body);
     // RETURNING "id" will give us back the id of the created movie
     const queryText = `
-    INSERT INTO "about" ("aboutpage")
-    VALUES ($1);`
-
+    INSERT INTO "new" ("date", "address", "title", "comment")
+    VALUES ($1, $2, $3, $4);`
     // FIRST QUERY MAKES MOVIE
-    pool.query(queryText, [req.body.about])
+    pool.query(queryText, [req.body.date, req.body.address, req.body.title, req.body.comment])
         .then(() => { res.sendStatus(201); })
         .catch(err => {
             console.log("aboutserver", err)

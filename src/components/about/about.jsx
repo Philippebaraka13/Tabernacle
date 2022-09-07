@@ -23,7 +23,8 @@ const AboutForm = (props) => {
             <h2>Enter About The Page</h2>
             <form onSubmit={addAbout} >
                 <div>
-                    <input type="text" placeholder="About" value={about} onChange={(event) => setAbout(event.target.value)} />
+                    <textarea type="text" placeholder="About" value={about} onChange={(event) => setAbout(event.target.value)} >
+                    </textarea>
                 </div>
                 <button type="submit">
                     submit
