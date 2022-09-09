@@ -6,11 +6,12 @@ const app = express();
 
 const sessionMiddleware = require('./modules/session-middleware');
 const passport = require('./strategies/user.strategy');
-
+const cron = require('node-cron');
 // Route includes
 const userRouter = require('./routes/user.router');
 const newRouter = require('./routes/new.router'); 
 const eventRouter = require('./routes/event.router');
+const scheduleDelete = require('./schedule');
 // Body parser middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -29,6 +30,10 @@ app.use('/api/event', eventRouter);
 
 // Serve static files
 app.use(express.static('build'));
+// schedule cron at 11pm. 
+cron.schedule('0 23 * * *', () => {
+  scheduleDelete();
+});
 
 // App Set //
 const PORT = process.env.PORT || 5000;

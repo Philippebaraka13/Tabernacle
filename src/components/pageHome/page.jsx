@@ -1,27 +1,29 @@
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 // import AboutForm from "../about/about";
+import UseDate from "../time";
 
 function About() {
 
-    const abouts = useSelector(store => store.about);
-    console.log("about", abouts)
+    const news = useSelector(store => store.new);
+    console.log("new", news)
     const dispatch = useDispatch();
 
-    console.log(abouts.length)
+    console.log(news.length)
 
     useEffect(() => {
-        dispatch({ type: "FETCH_ABOUT" });
+        dispatch({ type: "FETCH_NEW" });
     }, [dispatch]);
 
 
     return (
         <>
             <h1>about</h1>
-            {abouts.length !== undefined && abouts.map((about) => {
+            <UseDate />
+            {news.length !== undefined && news.map((index) => {
                 return (
-                    <div key={about.aboutpage}>
-                        <h2>{about.aboutpage}</h2>
+                    <div key={index.aboutpage}>
+                        <h2>{index.aboutpage}</h2>
                     </div>
                 )
             })

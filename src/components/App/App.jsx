@@ -22,6 +22,7 @@ import RegisterPage from '../RegisterPage/RegisterPage';
 import AboutForm from '../about/about';
 import About from '../pageHome/page';
 import './App.css';
+import UseDate from '../time';
 
 function App() {
   const dispatch = useDispatch();
@@ -129,11 +130,10 @@ function App() {
 
           {/* If none of the other routes matched, we will show a 404. */}
           <Route>
-          
+          {/* <UseDate /> */}
            <About />
           </Route>
           <Route>
-          
          <AboutForm />
          </Route>
         </Switch>

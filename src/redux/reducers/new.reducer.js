@@ -1,9 +1,9 @@
-const displayAbout=(state ={}, action) =>{
+const displayNew=(state ={}, action) =>{
     switch(action.type) {
-      case 'SET_ABOUT':
+      case 'SET_NEW':
         return action.payload;
         default:
           return state;
     }
   };
-  export default displayAbout;
+  export default displayNew;
