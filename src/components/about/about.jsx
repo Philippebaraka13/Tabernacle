@@ -5,15 +5,15 @@ import { useHistory } from 'react-router-dom';
 
 const AboutForm = (props) => {
 
-    const [newInfo, setNewInfo] = useState('');
+    const [about, setAbout] = useState('');
     const dispatch = useDispatch();
     const addAbout = event => {
         event.preventDefault();
         dispatch({
-            type: 'ADD_NEW',
-            payload: { new: newInfo }
+            type: 'ADD_ABOUT',
+            payload: { about: about }
         });
-        setNewInfo('');
+        setAbout('');
 
     };
 
@@ -23,8 +23,7 @@ const AboutForm = (props) => {
             <h2>Enter About The Page</h2>
             <form onSubmit={addAbout} >
                 <div>
-                    <textarea type="text" placeholder="New" value={newInfo} onChange={(event) => setAbout(event.target.value)} >
-                    </textarea>
+                    <input type="text" placeholder="About" value={about} onChange={(event) => setAbout(event.target.value)} />
                 </div>
                 <button type="submit">
                     submit
