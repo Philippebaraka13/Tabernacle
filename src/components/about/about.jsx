@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import EventFunction from "../event/event";
+import NewEvent from "../newEvent/newEvent";
 
 
 const AboutForm = (props) => {
@@ -29,6 +31,8 @@ const AboutForm = (props) => {
                     submit
                 </button>
             </form>
+            <NewEvent />
+            <EventFunction />
 
         </section>
 

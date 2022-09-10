@@ -21,8 +21,9 @@ import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 import AboutForm from '../about/about';
 import About from '../pageHome/page';
+import NewEvent from '../newEvent/newEvent';
 import './App.css';
-import UseDate from '../time';
+
 
 function App() {
   const dispatch = useDispatch();
@@ -135,6 +136,7 @@ function App() {
           </Route>
           <Route>
          <AboutForm />
+         <NewEvent />
          </Route>
         </Switch>
         <Footer />
