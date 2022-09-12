@@ -20,15 +20,6 @@ const NewEvent = (props) => {
     const [comment, setComment] = useState('');
     const [date, setDate] = useState(new Date());
 
-    function getFormattedDate(date) {
-        if (date === null) {
-            return
-        }
-        let t = date.indexOf('T');
-        let newDate = date.slice(0, t)
-        return newDate;
-    }
-
     const addNew = event => {
         event.preventDefault();
         dispatch({

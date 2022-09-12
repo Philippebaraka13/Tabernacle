@@ -22,7 +22,9 @@ import RegisterPage from '../RegisterPage/RegisterPage';
 import AboutForm from '../about/about';
 import About from '../pageHome/page';
 import NewEvent from '../newEvent/newEvent';
+import Info from '../newOutput/info';
 import './App.css';
+import 'media-queries';
 
 
 function App() {
@@ -38,24 +40,22 @@ function App() {
     <Router>
       <div>
         <Nav />
-        
-        <Switch>
-          {/* Visiting localhost:3000 will redirect to localhost:3000/home */}
-          {/* <Redirect exact from="/" to="/home" /> */}
 
-          {/* Visiting localhost:3000/about will show the about page. */}
+        <Switch>
+         
           <Route
             // shows AboutPage at all times (logged in or not)
             exact
-            path="/about"
+            path="/event"
           >
-            <AboutPage />
+
+            <About />
           </Route>
           <Route
-          exact
-          path="/aboutnew"
+            exact
+            path="/info"
           >
-          <About />
+            <Info />
           </Route>
 
           {/* For protected routes, the view could show one of several things on the same route.
@@ -85,7 +85,7 @@ function App() {
             path="/info"
           >
 
-          
+
           </ProtectedRoute>
           <Route
             exact
@@ -131,13 +131,10 @@ function App() {
 
           {/* If none of the other routes matched, we will show a 404. */}
           <Route>
-          {/* <UseDate /> */}
-           <About />
+            {/* <About /> */}
           </Route>
           <Route>
-         <AboutForm />
-         <NewEvent />
-         </Route>
+          </Route>
         </Switch>
         <Footer />
       </div>

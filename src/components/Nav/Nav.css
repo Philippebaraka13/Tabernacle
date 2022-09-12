@@ -39,4 +39,65 @@
   outline: 0;
 }
 
+.topnav a {
+  float: left;
+  display: block;
+  /* color: #f2f2f2; */
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: flex-start; */
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.nav a {
+  text-decoration: none;
+  /* color: inherit; */
+}
+
+/* .navLink, .navLogOut {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 1em;
+  text-decoration: none;
+  font-size: 1em;
+
+  /* these last two make the logout button in
+  the nav bar look like another link */
+  /* background-color: rgba(255, 255, 255, 0.955);
+  border: none;
+  border-top: 1px solid rgba(66, 77, 87, 0.955);
+  width: 8em;
+  cursor: pointer;
+  background-color: none;
+  transition: background-color 200ms linear;
+} */ */
+
+/* .navLogOut {
+  border-bottom: 1px solid rgba(66, 77, 87, 0.955);
+} */
+
+
+
+.menuIcon {
+  width: 2em;
+  margin: 1em;
+  position: sticky;
+  top: 1em;
+}
+
+.menuIcon:hover {
+  cursor: pointer ;
+}
+
+
 
