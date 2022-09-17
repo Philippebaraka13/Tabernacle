@@ -5,6 +5,9 @@ import {
     MuiPickersUtilsProvider,
     KeyboardDatePicker,
 } from '@material-ui/pickers';
+import MomentUtils from '@date-io/moment'
+import UploadAndDisplayImage from "../picture/picture";
+// Materail Ui
 
 
 const EventFunction = (props) => {
@@ -34,12 +37,13 @@ const EventFunction = (props) => {
             <h2>Upcoming event</h2>
             <form onSubmit={addEvent}>
                 <div>
-                    <input type="text" placeholder="link" value={link} onChange={(event) => setLink(event.target.value)} />
+                    <input type="text" placeholder="link" value={link} onChange={(event) => setLink(event.target.value)}  required />
                 </div>
                 <div>
                     <MuiPickersUtilsProvider utils={DateFnsUtils}>
                         <KeyboardDatePicker
                             disableToolbar
+                            required
                             variant="inline"
                             format="MM/dd/yyyy"
                             margin="normal"
@@ -48,7 +52,7 @@ const EventFunction = (props) => {
                             value={date}
                             onChange={(date) => setDate(date)}
                             KeyboardButtonProps={{
-                                // 'aria-label': 'change date',
+                                'aria-label': 'change date',
                             }}
                         />
                     </MuiPickersUtilsProvider>

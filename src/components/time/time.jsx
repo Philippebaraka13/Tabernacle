@@ -33,7 +33,26 @@ const UseDate = () => {
                 <h1>{wish}</h1>
             </>
         )
-    } else {
+    } else if (day == 'Monday') {
+        return (
+            <>
+                <h1>Upcoming service is Tomorrow</h1>
+            </>
+        )
+    } else if (day == 'Thursday') {
+        return (
+            <>
+                <h1>Upcoming service is Tomorrow</h1>
+            </>
+        )
+    } else if (day == 'Saturday') {
+        return (
+            <>
+                <h1>Upcoming service is Tomorrow</h1>
+            </>
+        )
+    }
+    else {
         return (
             <>
                 <h1>Not service today</h1>

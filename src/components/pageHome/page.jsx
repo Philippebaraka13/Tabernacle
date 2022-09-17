@@ -44,8 +44,8 @@ function About() {
 
                 <form onSubmit={addEventFunction}>
                     <div>
-                        <textarea type="text" placeholder="Provide your Name, Email, and comment" value={comment} onChange={(event) =>
-                            setComment(event.target.value)}>
+                        <textarea  rows={10}  cols={70} type="text" placeholder="Provide your Name, Email, and comment" value={comment} onChange={(event) =>
+                            setComment(event.target.value)}  required>
                         </textarea>
                     </div>
                     <button type="submit">

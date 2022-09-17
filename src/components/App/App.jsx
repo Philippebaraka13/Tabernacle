@@ -25,6 +25,11 @@ import NewEvent from '../newEvent/newEvent';
 import Info from '../newOutput/info';
 import './App.css';
 import 'media-queries';
+import moment from 'moment-timezone';
+
+// let launchMoment = require('moment')
+// require('moment-timezone')
+// moment.tz.setDefault('America/North_Dakota/Center')
 
 
 function App() {

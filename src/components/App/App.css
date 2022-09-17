@@ -141,7 +141,7 @@ nav ul li a {
   /* font-size: 18px; */
   text-decoration: none;
   display: block;
-  
+
 
 }
 
@@ -151,7 +151,7 @@ nav ul li a:hover {
   color: rgba(196, 68, 18, 0.583);
   color: #fff;
   cursor: pointer;
-  
+
 }
 
 .wood-text {
@@ -193,3 +193,15 @@ li {
   background-color: #061534;
 }
 
+.event {
+  display: flex;
+  gap: 1000px;
+  flex-wrap: wrap;
+
+}
+
+/* .event2{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+} */

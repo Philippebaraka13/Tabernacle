@@ -22,7 +22,7 @@ const AboutForm = (props) => {
     return (
 
         <section>
-            <h2>Enter About The Page</h2>
+            {/* <h2>Enter About The Page</h2>
             <form onSubmit={addAbout} >
                 <div>
                     <input type="text" placeholder="About" value={about} onChange={(event) => setAbout(event.target.value)} />
@@ -30,10 +30,8 @@ const AboutForm = (props) => {
                 <button type="submit">
                     submit
                 </button>
-            </form>
-            <NewEvent />
-            <EventFunction />
-
+            </form> */}
+            
         </section>
 
 

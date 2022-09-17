@@ -26,6 +26,7 @@
     "dotenv": "^8.6.0",
     "express": "^4.17.1",
     "media-queries": "^1.0.5",
+    "moment-timezone": "^0.5.37",
     "node-cron": "^3.0.2",
     "node-schedule": "^2.1.0",
     "passport": "^0.4.1",
