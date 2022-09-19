@@ -43,7 +43,7 @@ function App() {
 
   return (
     <Router>
-      <div>
+      
         <Nav />
 
         <Switch>
@@ -141,8 +141,7 @@ function App() {
           <Route>
           </Route>
         </Switch>
-        <Footer />
-      </div>
+      
     </Router>
   );
 }

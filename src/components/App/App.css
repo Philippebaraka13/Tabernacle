@@ -165,12 +165,11 @@ nav ul li a:hover {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-
   content: random-text;
   position: absolute;
   -webkit-text-stroke-width: stroke-width;
   -webkit-text-stroke-color: rgba(black, 0.6);
-  left: 10px;
+  left: 100px;
   top: 10px
 }
 
@@ -194,14 +193,45 @@ li {
 }
 
 .event {
-  display: flex;
-  gap: 1000px;
+  display: inline-flex;
   flex-wrap: wrap;
 
 }
 
-/* .event2{
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-} */
+.image {
+  width: 100%;
+  max-width: 100px;
+  height: auto;
+  background-color: #f5e5b4;
+  border-radius: 40%;
+}
+
+@media only screen and (max-width:600px) {
+  .wood-text {
+    display: none;
+  }
+
+
+}
+@media only screen and (max-width:600px) {
+  textarea {
+    width:100%;
+    height: auto;
+
+  }
+}
+.upcoming{
+  background-image: url('../../image/pexels-joyston-judah-933054.jpg');
+  width:auto;
+  height:100%;
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+ 
+  }
+
+  .info2{
+    background-color: #008183;
+    height: 100%;
+
+  }
+  

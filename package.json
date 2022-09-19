@@ -16,6 +16,7 @@
     "@material-ui/pickers": "^3.3.10",
     "@mui/lab": "^5.0.0-alpha.98",
     "@mui/x-date-pickers": "^5.0.1",
+    "@react-hook/media-query": "^1.1.1",
     "@sendgrid/mail": "^7.7.0",
     "axios": "^0.21.1",
     "bcryptjs": "^2.4.3",

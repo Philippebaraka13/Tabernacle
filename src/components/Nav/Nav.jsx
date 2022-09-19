@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Collapse, Button, CardBody, Card } from 'reactstrap';
 import React, { useState } from 'react';
 // import menuIcon from '../../images/menu_icon.svg'
+import Houston from '../../image/Houston.png'
 
 
 function Nav(args) {
@@ -21,8 +22,10 @@ function Nav(args) {
       {/* <Collapse className='h' isOpen={isOpen} {...args}> */}
       <div className="nav">
         <Link >
+        <div>
           <h2 className="wood-text" >Houston Tabernacle</h2>
-
+          <img className="image" src={Houston} />
+          </div>
         </Link>
         <div>
           {/* If no user is logged in, show these links */}
@@ -48,7 +51,7 @@ function Nav(args) {
             </>
           )}
           <Link className="navLink" to="/start">
-            <div id="container" className='topnav' >
+            <div >
               <nav>
                 <ul>
                   <li><a className="wood-texte" href="#">Home</a></li>
@@ -58,17 +61,17 @@ function Nav(args) {
 
           </Link>
           <Link className="navLink" to="/event">
-            <div id="container" className='topnav'>
+            <div>
               <nav>
                 <ul>
-                  <li><a className="wood-texte" href="#">UpComing Event</a></li>
+                  <li><a className="wood-texte" href="#">UpComing</a></li>
                 </ul>
               </nav>
             </div>
 
           </Link>
           <Link className="navLink" to="/contact">
-            <div id="container" className='topnav'>
+            <div>
               <nav>
                 <ul>
                   <li><a className="wood-texte" href="#">Contact</a></li>
@@ -78,7 +81,7 @@ function Nav(args) {
 
           </Link>
           <Link className="navLink" to="/location">
-            <div id="container" className='topnav'>
+            <div>
               <nav>
                 <ul>
                   <li><a className="wood-texte" href="#">Location</a></li>
@@ -89,7 +92,7 @@ function Nav(args) {
           </Link>
 
           <Link className="navLink" to="/about">
-            <div id="container" className='topnav'>
+            <div >
               <nav>
                 <ul>
                   <li><a className="wood-texte" href="#">About</a></li>
@@ -99,7 +102,7 @@ function Nav(args) {
 
           </Link>
           <Link className='navLink' to="/info">
-            <div id="container" className='topnav'>
+            <div >
               <nav>
                 <ul>
                   <li><a className="wood-texte" href="#">Info</a></li>

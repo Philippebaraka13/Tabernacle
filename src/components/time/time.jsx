@@ -26,29 +26,48 @@ const UseDate = () => {
 
     if (day == 'Tuesday' || day == "Wednesday" || day == "Friday" || day == "Sunday") {
         return (
+           
             <>
-                <h1>service today at 6PM</h1>
-                <h1>{date}</h1>
-                <h1>{time}</h1>
-                <h1>{wish}</h1>
+                <div>
+                    <h1>SERVICE TODAY AT 6:30PM - 9:30PM</h1>
+                    <h3>{date}</h3>
+                    <h3>{time}</h3>
+                    <h3>{wish}</h3>
+                </div>
             </>
         )
     } else if (day == 'Monday') {
         return (
             <>
-                <h1>Upcoming service is Tomorrow</h1>
+                <div >
+                    <h1>JOIN US TOMORROW AT 6:30PM - 9:30PM </h1>
+                    <h2> FOR PRAYER MEETING</h2>
+                    <h3>{date}</h3>
+                    <h3>{time}</h3>
+                    <h3>{wish}</h3>
+                </div>
             </>
         )
     } else if (day == 'Thursday') {
         return (
             <>
-                <h1>Upcoming service is Tomorrow</h1>
+                <div >
+                    <h1>JOIN US TOMORROW SERVICE AT 6:30PM - 9:30PM</h1>
+                    <h3>{date}</h3>
+                    <h3>{time}</h3>
+                    <h3>{wish}</h3>
+                </div>
             </>
         )
     } else if (day == 'Saturday') {
         return (
             <>
-                <h1>Upcoming service is Tomorrow</h1>
+                <div >
+                    <h1>JOIN US TOMORROW FOR SUNDAY SERVICE AT 9:30AM</h1>
+                    <h3>{date}</h3>
+                    <h3>{time}</h3>
+                    <h3>{wish}</h3>
+                </div>
             </>
         )
     }
@@ -56,12 +75,12 @@ const UseDate = () => {
         return (
             <>
                 <h1>Not service today</h1>
-                <h1>{date}</h1>
-                <h1>{time}</h1>
-                <h1>{wish}</h1>
+                <h3>{date}</h3>
+                <h3>{time}</h3>
+                <h3>{wish}</h3>
             </>
         )
-
+        
     }
 
 };

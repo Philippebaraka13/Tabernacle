@@ -38,9 +38,6 @@ function PictureDisplay() {
 
             })}
 
-
-
-
         </section>
 
     )
