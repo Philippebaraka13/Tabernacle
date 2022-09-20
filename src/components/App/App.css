@@ -202,8 +202,8 @@ li {
   width: 100%;
   max-width: 100px;
   height: auto;
-  background-color: #f5e5b4;
-  border-radius: 40%;
+  background-color: #f0e7ca;
+  border-radius: 50%;
 }
 
 @media only screen and (max-width:600px) {
@@ -213,25 +213,163 @@ li {
 
 
 }
+
 @media only screen and (max-width:600px) {
   textarea {
-    width:100%;
+    width: 100%;
     height: auto;
 
   }
 }
-.upcoming{
+
+.upcoming {
   background-image: url('../../image/pexels-joyston-judah-933054.jpg');
-  width:auto;
-  height:100%;
-  background-repeat: no-repeat; /* Do not repeat the image */
+  width: auto;
+  height: 111%;
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
   background-size: cover;
+
+}
+
+.info2 {
+  background-color: #008183;
+  height: 100%;
+
+}
+
+.time {
+  font-size: 60px;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  color: hwb(180 80% 19% / 0.852);
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0px #d0d3d0,
+    1px 2px 0px #928d96,
+    1px 3px 0px #928d96,
+    1px 4px 0px #928d96,
+    1px 5px 0px #928d96,
+    1px 6px 0px #928d96,
+    1px 10px 5px rgba(16, 16, 16, 0.5),
+    1px 15px 10px rgba(16, 16, 16, 0.4),
+    1px 20px 30px rgba(16, 16, 16, 0.3),
+    1px 25px 50px rgba(16, 16, 16, 0.2);
+  text-align: center;
+}
+
+.service {
+  font-size: 90px;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  color: hwb(180 80% 19% / 0.852);
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0px #d0d3d0,
+    1px 2px 0px #928d96,
+    1px 3px 0px #928d96,
+    1px 4px 0px #928d96,
+    1px 5px 0px #928d96,
+    1px 6px 0px #928d96,
+    1px 10px 5px rgba(16, 16, 16, 0.5),
+    1px 15px 10px rgba(16, 16, 16, 0.4),
+    1px 20px 30px rgba(16, 16, 16, 0.3),
+    1px 25px 50px rgba(16, 16, 16, 0.2);
+  text-align: center;
  
-  }
+}
 
-  .info2{
-    background-color: #008183;
-    height: 100%;
+.comment {
+  text-align: center;
+}
+
+.timeday {
+  text-align: center;
+}
+
+textarea {
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #b6b0b0;
+  font-size: 16px;
+  resize: none;
+}
+
+.form-submit-button {
+  background: #2f302b;
+  color: rgb(236, 234, 223);
+  border: 1px solid #eee;
+  border-radius: 20px;
+  /* box-shadow: 5px 5px 5px rgb(94, 88, 88); */
+  text-shadow: none;
+  width: 10%;
+  height: 10%;
+}
+
+.form-submit-button:hover {
+  background: #016ABC;
+  color: #fff;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #eee;
+  text-shadow: none;
+
+}
+
+.video {
+  text-align: center;
+}
+
+@media only screen and (max-width:600px) {
+  .upcoming {
+    width: 100%;
+    height: auto;
 
   }
+}
+
+@media only screen and (max-width:600px) {
+  .form-submit-button {
+    width: auto;
+    height: auto;
+
+  }
+}
+
+@media only screen and (max-width:600px) {
+  .link {
+    color: #d0d3d0;
+
+
+  }
+}
+
+@media only screen and (max-width:600px) {
+  .timeday {
+    color: black;
+
+  }
+}
+
+.homepage {
+  background-image: url('../../image/4945da5a-a414-4ddd-8f6c-7947faee19d4.jpg');
+  width: auto;
+  height: 111%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media only screen and (max-width:600px) {
+  .homepage {
+    width:auto;
+    height: auto;
   
+  }
+}
+.homeh{
+  top: 100px;
+  /* position:absolute;  */
+  left:80px;
+  position: fixed;
+}
+

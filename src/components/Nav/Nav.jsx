@@ -50,7 +50,7 @@ function Nav(args) {
               {/* <LogOutButton className="navLink" />  */}
             </>
           )}
-          <Link className="navLink" to="/start">
+          <Link className="navLink" to="/home">
             <div >
               <nav>
                 <ul>
@@ -64,7 +64,7 @@ function Nav(args) {
             <div>
               <nav>
                 <ul>
-                  <li><a className="wood-texte" href="#">UpComing</a></li>
+                  <li><a className="wood-texte" href="#">service</a></li>
                 </ul>
               </nav>
             </div>

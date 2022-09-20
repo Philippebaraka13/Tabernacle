@@ -26,6 +26,7 @@ import Info from '../newOutput/info';
 import './App.css';
 import 'media-queries';
 import moment from 'moment-timezone';
+import HomePage from '../home/home';
 
 // let launchMoment = require('moment')
 // require('moment-timezone')
@@ -43,105 +44,111 @@ function App() {
 
   return (
     <Router>
-      
-        <Nav />
 
-        <Switch>
-         
-          <Route
-            // shows AboutPage at all times (logged in or not)
-            exact
-            path="/event"
-          >
+      <Nav />
 
-            <About />
-          </Route>
-          <Route
-            exact
-            path="/info"
-          >
-            <Info />
-          </Route>
+      <Switch>
 
-          {/* For protected routes, the view could show one of several things on the same route.
+        <Route
+          // shows AboutPage at all times (logged in or not)
+          exact
+          path="/event"
+        >
+
+          <About />
+        </Route>
+        <Route
+          exact
+          path="/info"
+        >
+          <Info />
+        </Route>
+        <Route
+          exact
+          path="/home"
+        >
+          <HomePage />
+        </Route>
+
+        {/* For protected routes, the view could show one of several things on the same route.
             Visiting localhost:3000/user will show the UserPage if the user is logged in.
             If the user is not logged in, the ProtectedRoute will show the LoginPage (component).
             Even though it seems like they are different pages, the user is always on localhost:3000/user */}
-          <ProtectedRoute
-            // logged in shows UserPage else shows LoginPage
-            exact
-            path="/user"
-          >
-            <UserPage />
-          </ProtectedRoute>
+        <ProtectedRoute
+          // logged in shows UserPage else shows LoginPage
+          exact
+          path="/user"
+        >
+          <UserPage />
+        </ProtectedRoute>
 
-          <ProtectedRoute
-            // logged in shows InfoPage else shows LoginPage
-            exact
-            path="/info"
-          >
-            <InfoPage />
-          </ProtectedRoute>
-
-
-          <ProtectedRoute
-            // logged in shows InfoPage else shows LoginPage
-            exact
-            path="/info"
-          >
+        <ProtectedRoute
+          // logged in shows InfoPage else shows LoginPage
+          exact
+          path="/info"
+        >
+          <InfoPage />
+        </ProtectedRoute>
 
 
-          </ProtectedRoute>
-          <Route
-            exact
-            path="/login"
-          >
-            {user.id ?
-              // If the user is already logged in, 
-              // redirect to the /user page
-              <Redirect to="/user" />
-              :
-              // Otherwise, show the login page
-              <LoginPage />
-            }
-          </Route>
+        <ProtectedRoute
+          // logged in shows InfoPage else shows LoginPage
+          exact
+          path="/info"
+        >
 
-          <Route
-            exact
-            path="/registration"
-          >
-            {user.id ?
-              // If the user is already logged in, 
-              // redirect them to the /user page
-              <Redirect to="/user" />
-              :
-              // Otherwise, show the registration page
-              <RegisterPage />
-            }
-          </Route>
 
-          <Route
-            exact
-            path="/home"
-          >
-            {user.id ?
-              // If the user is already logged in, 
-              // redirect them to the /user page
-              <Redirect to="/user" />
-              :
-              // Otherwise, show the Landing page
-              <LandingPage />
-            }
-          </Route>
+        </ProtectedRoute>
+        <Route
+          exact
+          path="/login"
+        >
+          {user.id ?
+            // If the user is already logged in, 
+            // redirect to the /user page
+            <Redirect to="/user" />
+            :
+            // Otherwise, show the login page
+            <LoginPage />
+          }
+        </Route>
 
-          {/* If none of the other routes matched, we will show a 404. */}
-          <Route>
-            {/* <About /> */}
-          </Route>
-          <Route>
-          </Route>
-        </Switch>
-      
+        <Route
+          exact
+          path="/registration"
+        >
+          {user.id ?
+            // If the user is already logged in, 
+            // redirect them to the /user page
+            <Redirect to="/user" />
+            :
+            // Otherwise, show the registration page
+            <RegisterPage />
+          }
+        </Route>
+
+        <Route
+          exact
+          path="/home"
+        >
+          {user.id ?
+            // If the user is already logged in, 
+            // redirect them to the /user page
+            <Redirect to="/user" />
+            :
+            // Otherwise, show the Landing page
+            <LandingPage />
+          }
+        </Route>
+
+        {/* If none of the other routes matched, we will show a 404. */}
+        <Route>
+          {/* <About /> */}
+        </Route>
+        <Route>
+        </Route>
+      </Switch>
+
     </Router>
   );
 }

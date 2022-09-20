@@ -24,27 +24,43 @@ const UseDate = () => {
     const time = today.toLocaleTimeString(locale, { hour: 'numeric', hour12: true, minute: 'numeric' });
     console.log('daytodayday', day)
 
-    if (day == 'Tuesday' || day == "Wednesday" || day == "Friday" || day == "Sunday") {
+    if (day == 'Tuesday' || day == "Wednesday" || day == "Friday") {
         return (
-           
+
             <>
                 <div>
-                    <h1>SERVICE TODAY AT 6:30PM - 9:30PM</h1>
-                    <h3>{date}</h3>
-                    <h3>{time}</h3>
-                    <h3>{wish}</h3>
+                    <h1 className="time">SERVICE TODAY AT 6:30PM - 9:30PM</h1>
+                    <h2 className="timeday">TODAY DATE</h2>
+                    <h3 className="timeday">{date}</h3>
+                    <h3 className="timeday">{time}</h3>
+                    <h3 className="timeday">{wish}</h3>
                 </div>
             </>
         )
+    } else if (day == 'Sunday') {
+        return (
+            <>
+                <div>
+                    <h1 className="time">SERVICE TODAY AT 9:30AM - 1:30PM</h1>
+                    <h2 className="timeday">TODAY DATE</h2>
+                    <h3 className="timeday">{date}</h3>
+                    <h3 className="timeday">{time}</h3>
+                    <h3 className="timeday">{wish}</h3>
+                </div>
+            </>
+        )
+
     } else if (day == 'Monday') {
         return (
             <>
                 <div >
-                    <h1>JOIN US TOMORROW AT 6:30PM - 9:30PM </h1>
-                    <h2> FOR PRAYER MEETING</h2>
-                    <h3>{date}</h3>
-                    <h3>{time}</h3>
-                    <h3>{wish}</h3>
+                    <h1 className="service">Service</h1>
+                    <h1 className="time">JOIN US TOMORROW AT 6:30PM - 9:30PM </h1>
+                    <h2 className="time"> FOR PRAYER MEETING</h2>
+                    <h2 className="timeday">TODAY DATE</h2>
+                    <h3 className="timeday">{date}</h3>
+                    <h3 className="timeday">{time}</h3>
+                    <h3 className="timeday">{wish}</h3>
                 </div>
             </>
         )
@@ -52,10 +68,12 @@ const UseDate = () => {
         return (
             <>
                 <div >
-                    <h1>JOIN US TOMORROW SERVICE AT 6:30PM - 9:30PM</h1>
-                    <h3>{date}</h3>
-                    <h3>{time}</h3>
-                    <h3>{wish}</h3>
+                    <h1 className="service">Service</h1>
+                    <h1 className="time">JOIN US TOMORROW SERVICE AT 6:30PM - 9:30PM</h1>
+                    <h2 className="timeday">TODAY DATE</h2>
+                    <h3 className="timeday">{date}</h3>
+                    <h3 className="timeday">{time}</h3>
+                    <h3 className="timeday">{wish}</h3>
                 </div>
             </>
         )
@@ -63,10 +81,12 @@ const UseDate = () => {
         return (
             <>
                 <div >
-                    <h1>JOIN US TOMORROW FOR SUNDAY SERVICE AT 9:30AM</h1>
-                    <h3>{date}</h3>
-                    <h3>{time}</h3>
-                    <h3>{wish}</h3>
+                    <h1 className="service">Service</h1>
+                    <h1 className="time">JOIN US TOMORROW FOR SUNDAY SERVICE AT 9:30AM</h1>
+                    <h2 className="timeday">TODAY DATE</h2>
+                    <h3 className="timeday">{date}</h3>
+                    <h3 className="timeday">{time}</h3>
+                    <h3 className="timeday">{wish}</h3>
                 </div>
             </>
         )
@@ -80,7 +100,7 @@ const UseDate = () => {
                 <h3>{wish}</h3>
             </>
         )
-        
+
     }
 
 };
