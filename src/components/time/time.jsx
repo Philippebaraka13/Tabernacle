@@ -41,6 +41,7 @@ const UseDate = () => {
         return (
             <>
                 <div>
+                   
                     <h1 className="time">SERVICE TODAY AT 9:30AM - 1:30PM</h1>
                     <h2 className="timeday">TODAY DATE</h2>
                     <h3 className="timeday">{date}</h3>
@@ -54,7 +55,7 @@ const UseDate = () => {
         return (
             <>
                 <div >
-                    <h1 className="service">Service</h1>
+                   
                     <h1 className="time">JOIN US TOMORROW AT 6:30PM - 9:30PM </h1>
                     <h2 className="time"> FOR PRAYER MEETING</h2>
                     <h2 className="timeday">TODAY DATE</h2>
@@ -68,7 +69,7 @@ const UseDate = () => {
         return (
             <>
                 <div >
-                    <h1 className="service">Service</h1>
+                   
                     <h1 className="time">JOIN US TOMORROW SERVICE AT 6:30PM - 9:30PM</h1>
                     <h2 className="timeday">TODAY DATE</h2>
                     <h3 className="timeday">{date}</h3>
@@ -81,7 +82,7 @@ const UseDate = () => {
         return (
             <>
                 <div >
-                    <h1 className="service">Service</h1>
+                  
                     <h1 className="time">JOIN US TOMORROW FOR SUNDAY SERVICE AT 9:30AM</h1>
                     <h2 className="timeday">TODAY DATE</h2>
                     <h3 className="timeday">{date}</h3>

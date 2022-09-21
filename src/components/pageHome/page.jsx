@@ -43,17 +43,17 @@ function About() {
                         )
                     })}
 
-                    <form onSubmit={addEventFunction} className = "comment">
+                    <form onSubmit={addEventFunction} className="comment">
                         <div>
                             <textarea className="textarea" rows={10} cols={70} type="text" placeholder="Provide your Name, Email, and Comment if you need the link channel"
-                             value={comment} onChange={(event) =>
-                                setComment(event.target.value)} required>
+                                value={comment} onChange={(event) =>
+                                    setComment(event.target.value)} required>
                             </textarea>
                         </div>
                         <div >
-                        <button className="form-submit-button" type="submit">
-                            submit
-                        </button>
+                            <button className="form-submit-button" type="submit">
+                                submit
+                            </button>
                         </div>
                     </form>
                 </div>

@@ -1,20 +1,34 @@
 // import React from 'react';
 import { Link } from 'react-router-dom';
-import LogOutButton from '../LogOutButton/LogOutButton';
 import './Nav.css';
-import { useSelector } from 'react-redux';
+import { useSelector} from 'react-redux';
+import { useEffect} from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Collapse, Button, CardBody, Card } from 'reactstrap';
 import React, { useState } from 'react';
-// import menuIcon from '../../images/menu_icon.svg'
-import Houston from '../../image/Houston.png'
+import Houston from '../../image/Houston.png';
 
 
 function Nav(args) {
 
-  const [isOpen, setIsOpen] = useState(false);
-  const toggle = () => setIsOpen(!isOpen);
+  const [toggleMenu, setToggleMenu] = useState(false);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth)
   const user = useSelector((store) => store.user);
+
+  const toggleNav = () => {
+    setToggleMenu(!toggleMenu)
+  }
+
+  useEffect(() => {
+
+    const changeWidth = () => {
+      setScreenWidth(window.innerWidth)
+    }
+    window.addEventListener('resize', changeWidth)
+
+    return () => {
+      window.removeEventListener('resize', changeWidth)
+    }
+  }, [])
 
   return (
     <>
@@ -22,9 +36,9 @@ function Nav(args) {
       {/* <Collapse className='h' isOpen={isOpen} {...args}> */}
       <div className="nav">
         <Link >
-        <div>
-          <h2 className="wood-text" >Houston Tabernacle</h2>
-          <img className="image" src={Houston} />
+          <div>
+            <h2 className="wood-text" >Houston Tabernacle</h2>
+            <img className="image" src={Houston} />
           </div>
         </Link>
         <div>
@@ -50,68 +64,62 @@ function Nav(args) {
               {/* <LogOutButton className="navLink" />  */}
             </>
           )}
-          <Link className="navLink" to="/home">
-            <div >
-              <nav>
-                <ul>
-                  <li><a className="wood-texte" href="#">Home</a></li>
-                </ul>
-              </nav>
-            </div>
+          {(toggleMenu || screenWidth > 600) && (
+            <>
+              <Link className="navLink" to="/home">
+                <div >
+                  <nav>
+                    <ul className='list'>
+                      <li className='item'><a className="wood-texte" href="#">Home</a></li>
+                    </ul>
+                  </nav>
+                </div>
 
-          </Link>
-          <Link className="navLink" to="/event">
-            <div>
-              <nav>
-                <ul>
-                  <li><a className="wood-texte" href="#">service</a></li>
-                </ul>
-              </nav>
-            </div>
+              </Link>
+              <Link className="navLink" to="/event">
+                <div>
+                  <nav>
+                    <ul className='list'>
+                      <li className='item'><a className="wood-texte" href="#">service</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </Link>
+              <Link className="navLink" to="/location">
+                <div>
+                  <nav>
+                    <ul className='list'>
+                      <li className='item'><a className="wood-texte" href="#">Location</a></li>
+                    </ul>
+                  </nav>
+                </div>
 
-          </Link>
-          <Link className="navLink" to="/contact">
-            <div>
-              <nav>
-                <ul>
-                  <li><a className="wood-texte" href="#">Contact</a></li>
-                </ul>
-              </nav>
-            </div>
+              </Link>
 
-          </Link>
-          <Link className="navLink" to="/location">
-            <div>
-              <nav>
-                <ul>
-                  <li><a className="wood-texte" href="#">Location</a></li>
-                </ul>
-              </nav>
-            </div>
+              <Link className="navLink" to="/about">
+                <div >
+                  <nav>
+                    <ul className='list'>
+                      <li className='item'><a className="wood-texte" href="#">About</a></li>
+                    </ul>
+                  </nav>
+                </div>
 
-          </Link>
-
-          <Link className="navLink" to="/about">
-            <div >
-              <nav>
-                <ul>
-                  <li><a className="wood-texte" href="#">About</a></li>
-                </ul>
-              </nav>
-            </div>
-
-          </Link>
-          <Link className='navLink' to="/info">
-            <div >
-              <nav>
-                <ul>
-                  <li><a className="wood-texte" href="#">Info</a></li>
-                </ul>
-              </nav>
-            </div>
-          </Link>
+              </Link>
+              <Link className='navLink' to="/info">
+                <div >
+                  <nav>
+                    <ul className='list'>
+                      <li className='item'><a className="wood-texte" href="#">Info</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </Link>
+            </>
+          )}
         </div>
       </div>
+      <button onClick={toggleNav} className='btnd'>Option</button>
       {/* </Collapse> */}
     </>
   );

@@ -1,115 +1,117 @@
+/* The background of the nav and position of the nav */
 .nav {
-  /* flex box layout */
-  /* display: flex; */
   justify-content: space-between;
-  align-items: center;
   max-height: 20%;
   position: fixed;
-  /* position: relative; */
   top: 0;
-  margin: 0 0 30px;
-  /* background: url('https://i.imgur.com/OUyfQnt.jpg'); */
+  /* margin: 0 0 30px; */
   background-color: #050e25;
-width: 100vw;
-  overflow: hidden;
+  width: 100%;
+  overflow:hidden;
+  transition: top 0.3s;
+}
+
+/* remove the button list on the nav bar name */
+nav ul li {
+  display: inline-block;
+  border-radius: 50px;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+/* make the nav rounded  */
+nav ul li a {
+  padding: 10px;
+  font-family: "Open Sans";
+  text-transform: uppercase;
+  text-decoration: none;
+  display: block;
+}
+
+/* making the color of the name of nav white when you even that target */
+nav ul li a:hover {
+  color: rgba(196, 68, 18, 0.583);
+  color: #fff;
+  cursor: pointer;
+
+}
+/* background of the nav blue */
+li {
+  background-color: #061534;
 }
 
 .nav a {
   text-decoration: none;
 }
 
-.nav-title {
-  font-size: 24px;
-  font-weight: 700;
-  color: #f2f2f2;
-  padding-left: 10px;
-  margin: 0;
-}
-
+/* list of the nav  */
 .navLink {
   display: inline-flex;
   color: #f2f2f2;
-  /* background-color: #0a2832; */
-  /* text-align:; */
+
   padding: 24px 10px;
   text-decoration: none;
   font-size: 15px;
-
-  /* these last two make the logout button in
-  the nav bar look like another link */
   border: none;
   cursor: pointer;
   outline: 0;
 }
 
-.topnav a {
-  float: left;
-  display: block;
-  /* color: #f2f2f2; */
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+.btnd {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  padding: 5px;
+  color: white;
+  font-size: 18px;
 }
 
+/* mobile friendly with nav bar  */
+@media screen and (max-width:600px) {
 
-.nav {
-  display: flex;
-  justify-content: space-between;
-  /* align-items: flex-start; */
-  flex-direction: row;
-  overflow: hidden;
-}
-
-.nav a {
-  text-decoration: none;
-  /* color: inherit; */
-}
-
-/* .navLink, .navLogOut {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  padding: 1em;
-  text-decoration: none;
-  font-size: 1em;
-
-  /* these last two make the logout button in
-  the nav bar look like another link */
-/* background-color: rgba(255, 255, 255, 0.955);
-  border: none;
-  border-top: 1px solid rgba(66, 77, 87, 0.955);
-  width: 8em;
-  cursor: pointer;
-  background-color: none;
-  transition: background-color 200ms linear;
-} */
-*/
-/* .navLogOut {
-  border-bottom: 1px solid rgba(66, 77, 87, 0.955);
-} */
-
-
-
-.menuIcon {
-  width: 2em;
-  margin: 1em;
-  position: sticky;
-  top: 1em;
-}
-
-.menuIcon:hover {
-  cursor: pointer;
-}
-
-@media only screen and(max-width:1200px) {
-  .wood-text {
-    font-size: 1em;
+  .list {
+    flex-direction: column;
+    height: auto;
   }
 
+  .item:htn-child(1) {
+    border-top: 1px solid black;
+    margin-top: 50px;
+  }
+  .item {
+    width: 100%;
+    border-top: 1px solid black;
+    text-align: center;
+    margin-right: 0px;
+  }
+  .btnd{
+    display: block;
+    background-color: rgba(31, 24, 14, 0.999);
+    margin:10px;
+    border-radius: 100px;
+  }
+  nav ul li a{
+    padding: 0px;
+  }
+  .nav {
+    max-height:auto;
+    position:fixed;
+    top:0px;
+    margin:0px;
+    background-color: #050e25;
+    width: 100vw;
+    overflow:auto;
+  }
   .navLink {
-    font-size: 1000em;
-
+    display:inline-block;
+    padding: 0px;
+    text-decoration: none;
+    font-size: 11px;
+    width: 100%;
+    text-align: center;
+    margin-right: 0px;
   }
 
 }

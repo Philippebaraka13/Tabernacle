@@ -19,9 +19,9 @@ function Info() {
     return (
         <>
             <section className="info2">
-                {/* <div className="image1" >
-                    <img className="img" src={Houston} />
-                </div> */}
+                <figure className="figureinfo">
+                    <h1 className="info1">announcement</h1>
+                </figure>
                 {info.length !== undefined && info.map((infos, index) => {
                     let x = infos.date;
                     console.log("daaate", x)
@@ -29,21 +29,24 @@ function Info() {
                     let date = x.split('T')[0]
                     return (
                         <>
-                           
-                            <figure className="info" >
-                            <div key={index} >
 
-                                <h1 className="info1">Title</h1>
-                                <h3 className="info1">{infos.title}</h3>
-                                <h1 className="info1">Address</h1>
-                                <h3 className="info1">{infos.address}</h3>
-                                <h1 className="info1">Date</h1>
-                                <h3 className="info1">{date}</h3>
-                                <h1 className="info1">Comment</h1>
-                                <h3 className="info1">{infos.comment}</h3>
-                                <PictureDisplay className="info1" />
+                            <div key={index} className="info3" >
+
+                                <div className="info4">
+                                    {/* <h1 className="info5">Title</h1> */}
+                                    <dl>
+                                    <dd className="info5">{infos.title}</dd>
+                                    {/* <h1 className="info5">Address</h1> */}
+                                    <dd>{infos.address}</dd>
+                                    {/* <h1 className="info5">Date</h1> */}
+                                    <dd>{date}</dd>
+                                    {/* <h1 className="info5">Comment</h1> */}
+                                    <dd className="ptag">{infos.comment}</dd>
+                                    {/* <PictureDisplay className="info1" /> */}
+                                    </dl>
+                                </div>
                             </div>
-                            </figure>
+
                         </>
                     )
                 })}
