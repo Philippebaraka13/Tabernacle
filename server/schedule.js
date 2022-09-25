@@ -6,7 +6,7 @@ function scheduleDelete(){
     //delete from "event" where DATE_TRUNC('DAY', date) < CURRENT_DATE + INTERVAL '2days';
     console.log("running schedule delete");
     const queryText = `delete from "new" where DATE_TRUNC('DAY', date) = CURRENT_DATE;`
-    const queryText1 =`delete from "event" where DATE_TRUNC('DAY', date) = CURRENT_DATE + INTERVAL 'day';`
+    const queryText1 =`delete from "event" where DATE_TRUNC('DAY', date) = CURRENT_DATE;`
     pool.query(queryText).then(() => {
         console.log("new was delete")
     })

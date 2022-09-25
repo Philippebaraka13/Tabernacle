@@ -83,7 +83,8 @@ const UseDate = () => {
             <>
                 <div >
                   
-                    <h1 className="time">JOIN US TOMORROW FOR SUNDAY SERVICE AT 9:30AM</h1>
+                    <h1 className="time">JOIN US TOMORROW FOR SUNDAY SERVICE AT</h1> 
+                    <h1 className="time">9:30AM -1:30PM</h1>
                     <h2 className="timeday">TODAY DATE</h2>
                     <h3 className="timeday">{date}</h3>
                     <h3 className="timeday">{time}</h3>

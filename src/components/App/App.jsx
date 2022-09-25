@@ -19,7 +19,7 @@ import InfoPage from '../InfoPage/InfoPage';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
-import AboutForm from '../about/about';
+import AboutOffice from '../about/about';
 import About from '../pageHome/page';
 import NewEvent from '../newEvent/newEvent';
 import Info from '../newOutput/info';
@@ -28,9 +28,7 @@ import 'media-queries';
 import moment from 'moment-timezone';
 import HomePage from '../home/home';
 
-// let launchMoment = require('moment')
-// require('moment-timezone')
-// moment.tz.setDefault('America/North_Dakota/Center')
+
 
 
 function App() {
@@ -68,6 +66,12 @@ function App() {
           path="/home"
         >
           <HomePage />
+        </Route>
+        <Route
+          exact
+          path="/about"
+        >
+          <AboutOffice />
         </Route>
 
         {/* For protected routes, the view could show one of several things on the same route.

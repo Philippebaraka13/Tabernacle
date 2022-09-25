@@ -1,41 +1,34 @@
 import React, { useState } from "react";
-import { useDispatch } from 'react-redux';
-import { useHistory } from 'react-router-dom';
-import EventFunction from "../event/event";
-import NewEvent from "../newEvent/newEvent";
 
 
-const AboutForm = (props) => {
-
-    const [about, setAbout] = useState('');
-    const dispatch = useDispatch();
-    const addAbout = event => {
-        event.preventDefault();
-        dispatch({
-            type: 'ADD_ABOUT',
-            payload: { about: about }
-        });
-        setAbout('');
-
-    };
+function AboutOffice() {
 
     return (
+        <div className="aboutoffice">
+            <h1 className="info1">offices in church</h1>
 
-        <section>
-            {/* <h2>Enter About The Page</h2>
-            <form onSubmit={addAbout} >
-                <div>
-                    <input type="text" placeholder="About" value={about} onChange={(event) => setAbout(event.target.value)} />
-                </div>
-                <button type="submit">
-                    submit
-                </button>
-            </form> */}
-            
-        </section>
+            <div className="eleven">
+                <h2 className="office">Pastor: Zoe Dembe.</h2>
+            </div>
+            <div className="twelve">
+                <h2 className="office">Phone Number: +1832-890-0391</h2>
+            </div>
+            <div className="eleven">
+                <h2 className="office">Trustee: Fabian Makang.</h2>
+            </div>
+            <div className="twelve">
+                <h2 className="office">Phone Number: +1832-435-4099</h2>
+            </div>
+            <div className="eleven">
+                <h2 className="office">Treasure/Secretary: Michee Salama.</h2>
+            </div>
+            <div className="twelve">
+                <h2 className="office"> Phone Number: +1281-912-5581</h2>
+            </div>
+        </div>
 
 
     )
 }
-export default AboutForm;
+export default AboutOffice;
 

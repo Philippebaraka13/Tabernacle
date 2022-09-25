@@ -4,7 +4,14 @@ function HomePage() {
 
     return (
         <div className="homepage">
-            <h1 >Home page</h1>
+            <h1>homepages</h1>
+            <h1>homepages</h1>
+            <h1>homepages</h1>
+            <h1>homepages</h1>
+            <h1>homepages</h1>
+            <h1>homepages</h1>
+            <h1>homepages</h1>
+            <h1>homepages</h1>
         </div>
     )
 }
